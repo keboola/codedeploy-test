@@ -8,6 +8,9 @@ hooks:
     - location: codedeploy-scripts/prepare.sh
       timeout: 300
       runas: root
+    - location: codedeploy-scripts/download-config.sh
+      timeout: 300
+      runas: root
   ApplicationStart:
     - location: codedeploy-scripts/link.sh
       timeout: 300
