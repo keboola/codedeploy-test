@@ -3,3 +3,8 @@ os: linux
 files:
   - source: /index.html
     destination: /var/www/html/
+hooks:
+  AfterInstall:
+    - location: codedeploy-scripts/prepare.sh
+      timeout: 300
+      runas: root
